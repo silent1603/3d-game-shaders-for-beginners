@@ -4,7 +4,9 @@
 */
 
 #include <thread>
+#ifdef __linux__
 #include <unistd.h>
+#endif
 #include <random>
 #include <string>
 #include <chrono>
