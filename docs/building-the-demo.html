@@ -103,14 +103,17 @@
 
 <p>Before you can try out the demo program, you'll have to build the example code first.</p>
 <h3 id="dependencies">Dependencies</h3>
-<p>Before you can compile the example code, you'll need to install <a href="https://www.panda3d.org/">Panda3D</a> for your platform. Panda3D is available for Linux, Mac, and Windows.</p>
+<p>Before you can compile the example code, you'll need to install <a href="https://www.panda3d.org/">Panda3D</a> for your platform and <a href="https://cmake.org/download/">CMake</a>. Panda3D and Cmake is available for Linux, Mac, and Windows.</p>
 <h3 id="linux">Linux</h3>
 <p>Start by <a href="https://www.panda3d.org/manual/?title=Installing_Panda3D_in_Linux">installing</a> the <a href="https://www.panda3d.org/download/sdk-1-10-9/">Panda3D SDK</a> for your distribution.</p>
 <p>Make sure to locate where the Panda3D headers and libraries are. The headers and libraries are most likely in <code>/usr/include/panda3d/</code> and <code>/usr/lib/panda3d/</code> respectively.</p>
 <p>Next clone this repository and change directory into it.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> clone https://github.com/lettier/3d-game-shaders-for-beginners.git</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">cd</span> 3d-game-shaders-for-beginners/demonstration</span></code></pre></div>
-<p>Now compile the source code into an object file.</p>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">cd</span> 3d-game-shaders-for-beginners/demonstration</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">mkdir</span> build</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">cmake</span> -DPANDA_3D_PATH=&lt;path to panda3d&gt; ..</span></code></pre>
+</div>
+<p>If you don't want use CMake, You can compile the source code into an object file.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">g++</span> \</span>
 <span id="cb2-2"><a href="#cb2-2"></a>  -c src/main.cxx \</span>
 <span id="cb2-3"><a href="#cb2-3"></a>  -o 3d-game-shaders-for-beginners.o \</span>
@@ -137,8 +140,11 @@
 <p>Make sure to locate where the Panda3D headers and libraries are.</p>
 <p>Next clone this repository and change directory into it.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> clone https://github.com/lettier/3d-game-shaders-for-beginners.git</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">cd</span> 3d-game-shaders-for-beginners</span></code></pre></div>
-<p>Now compile the source code into an object file. You'll have to find where the Python 2.7 and Panda3D include directories are.</p>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">cd</span> 3d-game-shaders-for-beginners</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">mkdir</span> build</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">cmake</span> -DPANDA_3D_PATH=&lt;path to panda3d&gt; ..</span></code></pre>
+</div>
+<p>if you don't want to use Cmake ,You can compile the source code into an object file. You'll have to find where the Python 2.7 and Panda3D include directories are.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">clang</span>++ \</span>
 <span id="cb5-2"><a href="#cb5-2"></a>  -c main.cxx \</span>
 <span id="cb5-3"><a href="#cb5-3"></a>  -o 3d-game-shaders-for-beginners.o \</span>
@@ -166,7 +172,10 @@
 <p>Make sure to locate where the Panda3D headers and libraries are.</p>
 <p>Next clone this repository and change directory into it.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">git</span> clone https://github.com/lettier/3d-game-shaders-for-beginners.git</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">cd</span> 3d-game-shaders-for-beginners</span></code></pre></div>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">cd</span> 3d-game-shaders-for-beginners/demonstration</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">mkdir</span> build</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="bu">cmake</span> -DPANDA_3D_PATH=&lt;path to panda3d&gt; ..</span>
+</div>
 <p>For more help, see the <a href="https://www.panda3d.org/manual/?title=Running_your_Program&amp;language=cxx">Panda3D manual</a>.</p>
 <h2 id="copyright">Copyright</h2>
 <p>(C) 2019 David Lettier <br> <a href="https://www.lettier.com">lettier.com</a></p>
